@@ -1,0 +1,396 @@
+/*CSS Stylesheet T.O.C. - Table of contents
+Created 01 June 2021
+Last update July 2021: 
+
+
+Compatible Browser:
+Firefox V.89.0.2 (64-bit)
+Chrome V.91.0.4472.124 (Build oficial) (64-bits)
+Edge V.91.0.864.67 (Compilación oficial) (64-bits)
+
+
+=RESET % CONDITIONAL COMMENT
+=GENERAL
+=LAYOUT:
+=PAGES
+
+      =index
+
+/*       RESET      */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+sub,
+sup,
+time,
+u,
+ul,
+var,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+/*///////////////////////GENERAL///////////////////////////*/
+
+html {
+  background-color: white;
+  font-size: 62.5%;
+}
+
+body {
+  color: black;
+  display: block;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.8rem;
+  height: auto;
+  line-height: 2;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* TOP BAR EMULATING A WEBSITE */
+.nav-bar {
+  background-color: black;
+  height: 20px;
+  width: 100%;
+}
+
+h1 {
+  display: block;
+  font-size: 4rem;
+  line-height: 70px;
+  margin-bottom: 40px;
+  width: 28ch;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  /*ADDING EXTRA SPACE BETWEEN PARAGRAPHS AND THE HEADLINE H2*/
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3::before {
+  color: #2f7851;
+  content: "\27A4";
+  margin-right: 8px;
+}
+
+blockquote {
+  font-family: 'Anaheim', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  border-bottom: 1px solid #2f7851;
+  color: black;
+  text-decoration: none;
+}
+
+a:focus,
+summary:focus {
+  background-color: #2f7851;
+  color: white;
+}
+
+div.clear {
+  clear: both;
+}
+
+/*///////////////////////MAIN, SECTION AND ARTICLE///////////////////////////*/
+
+main,
+section {
+  display: flex;
+  height: auto;
+  margin: 25px auto;
+  width: 900px;
+}
+
+article {
+  display: block;
+  margin: 0 auto;
+  width: 650px;
+}
+
+/*///////////////////////HEADER///////////////////////////*/
+
+header {
+  display: block;
+  margin-bottom: 60px;
+  width: 650px;
+}
+
+header .intro {
+  align-items: center;
+  border-bottom: 5px solid #2f7851;
+  border-top: 1px solid #2f7851;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+
+.intro .byline {
+  margin-left: 15px;
+}
+
+.intro .description {
+  color: rgb(110, 110, 110);
+  font-size: 1.4rem;
+  margin-left: 42px;
+}
+
+.social-network a {
+  border-bottom: none;
+}
+
+.sprite1 {
+  background: url(sprite3.png) 0 0;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.sprite1:hover {
+  background: url(sprite3.png) 0 -31px;
+  cursor: pointer;
+}
+
+.sprite2 {
+  background: url(sprite3.png) -29px 0;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.sprite2:hover {
+  background: url(sprite3.png) -29px -31px;
+  cursor: pointer;
+}
+
+.sprite3 {
+  background: url(sprite3.png) -61px 0;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.sprite3:hover {
+  background: url(sprite3.png) -61px -31px;
+  cursor: pointer;
+}
+
+.sprite {
+  margin: 10px 8px 0 8px;
+}
+
+.post-date {
+  margin-right: 15px;
+}
+
+
+/* ARTICLE CONTENT */
+
+figure {
+  width: 650px;
+}
+
+figure img {
+  display: block;
+  height: 400px;
+  object-fit: cover;
+  width: 650px;
+}
+
+figcaption {
+  font-family: 'Anaheim', sans-serif;
+  font-size: 1.6rem;
+}
+
+.lead-in {
+  color: #2f7851;
+  font-family: 'Anaheim', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  /*THIS SPACE IS TO SEPARATE THE LEADING-TEXT AND THE PARAGRAPHS*/
+  margin-top: 60px;
+  /*THIS SPACE IS TO SEPARATE THE LEADING-TEXT AND THE FIGCAPTION*/
+  width: 650px;
+}
+
+/* REMEMBER ASLWAYS PUT THE CLASS TEXT IN THE SIMPLE PARAGRAPHS */
+article .text {
+  margin-bottom: 30px;
+}
+
+.phases {
+  margin-bottom: 80px;
+}
+
+.phases li {
+  margin-bottom: 40px;
+}
+
+blockquote {
+  display: block;
+  margin: 100px auto 78px auto;
+  text-align: left;
+  width: 100%;
+}
+
+.quote {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+
+.quote::before {
+  color: #2f7851;
+  content: "\201c";
+  display: block;
+  font-family: helvetica;
+  font-size: 8rem;
+  line-height: 0;
+}
+
+.cited {
+  color: rgb(110, 110, 110);
+  font-size: 1.5rem;
+  margin-left: 100px;
+  width: 60ch;
+}
+
+.author-cited {
+  margin-left: 90px;
+}
+
+/*///////////////////////ASIDE///////////////////////////*/
+
+aside {
+  display: block;
+  height: auto;
+  padding-left: 40px;
+}
+
+details {
+  font-family: 'Anaheim', sans-serif;
+  height: 50px;
+  margin-top: 315px;
+  position: sticky;
+  top: 50px;
+  width: 220px;
+}
+
+details summary:hover {
+  font-weight: bold;
+}
+
+details nav {
+  color: rgb(124, 124, 124);
+  font-size: 1.6rem;
+  margin-left: 22px;
+}
+
+details nav ul li {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+details ul li a {
+  border-bottom: none;
+}
+
+details ul li a:hover {
+  border-bottom: 1px solid #2f7851;
+}
